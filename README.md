@@ -1,6 +1,6 @@
 ## Instructions
 
-To create a particular plot, run the script of the same name. The scripts automatically run the "cleandata.R" script if it hasn't already been run. Example output for each script is provided. </br>
+To create a particular plot, run the script of the same name. The scripts automatically run the "cleandata.R" script if it hasn't already been run. Example output for each plot script is provided. </br>
 
 The plot scripts ("plot1.R" through "plot4.R") create appropriately-named PNG files of their respective plots. As the name suggests, "cleandata.R" cleans the data by condensing the "Date" and "Time" variables and stripping all data not collected on "01-02-2007" or "02-02-2007". This script also assumes that the uncompressed data and the scripts are in separate subdirectories of the same directory with the data in a "data" subdirectory. If there are errors, check to be sure the scripts conform to your directory structure. The data is not provided in this repository, but a link to it is below. Further details of how the scripts work are available in the scripts' comments.
 
@@ -38,27 +38,3 @@ web site</a>:
 <li><b>Sub_metering_2</b>: energy sub-metering No. 2 (in watt-hour of active energy). It corresponds to the laundry room, containing a washing-machine, a tumble-drier, a refrigerator and a light. </li>
 <li><b>Sub_metering_3</b>: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.</li>
 </ol>
-
-## Loading the data
-
-
-
-
-
-When loading the dataset into R, please consider the following:
-
-* The dataset has 2,075,259 rows and 9 columns. First
-calculate a rough estimate of how much memory the dataset will require
-in memory before reading into R. Make sure your computer has enough
-memory (most modern computers should be fine).
-
-* We will only be using data from the dates 2007-02-01 and
-2007-02-02. One alternative is to read the data from just those dates
-rather than reading in the entire dataset and subsetting to those
-dates.
-
-* You may find it useful to convert the Date and Time variables to
-Date/Time classes in R using the `strptime()` and `as.Date()`
-functions.
-
-* Note that in this dataset missing values are coded as `?`.
