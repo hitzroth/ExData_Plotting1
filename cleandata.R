@@ -7,7 +7,7 @@ data <-read.csv("../data/household_power_consumption.txt",
 Datetime <- parse_date_time2(paste(data$Date, data$Time),
                              "%d/%m/%Y %H:%M:%S", tz = "UTC")
 #rebuild the data frame
-df <- data.frame(Datetime = Datetime ,
+data <- data.frame(Datetime = Datetime ,
                 Global_active_power = data$Global_active_power,
                 Global_reactive_power = data$Global_reactive_power,
                 Voltage = data$Voltage,
@@ -16,8 +16,8 @@ df <- data.frame(Datetime = Datetime ,
                 Sub_metering_2 = data$Sub_metering_2,
                 Sub_metering_3 = data$Sub_metering_3)
 #strip all but necessary entries
-df <- df[floor_date(df$Datetime, unit = "day") == dmy("01-02-2007") |
-           floor_date(df$Datetime, unit = "day") == dmy("02-02-2007"),]
+cleandata <- data[floor_date(data$Datetime, unit = "day") == dmy("01-02-2007") |
+           floor_date(data$Datetime, unit = "day") == dmy("02-02-2007"),]
 
 #cleanup
 rm(Datetime, data)

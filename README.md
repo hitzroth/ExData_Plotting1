@@ -1,6 +1,8 @@
 ## Instructions
 
-The script "cleandata.R" must be run first, then any of the plot scripts ("plot1.R" through "plot4.R") may be used. As the name suggests, "cleandata.R" cleans the data by condensing the "Date" and "Time" variables and stripping all data not collected on "01-02-2007" or "02-02-2007". The plot scripts produce the png files, which are named for the scripts that produce them. Further details of how the scripts work are available in the scripts' comments.
+To create a particular plot, run the script of the same name. The scripts automatically run the "cleandata.R" script if it hasn't already been run. Example output for each script is provided. </br>
+
+The plot scripts ("plot1.R" through "plot4.R") create appropriately-named PNG files of their respective plots. As the name suggests, "cleandata.R" cleans the data by condensing the "Date" and "Time" variables and stripping all data not collected on "01-02-2007" or "02-02-2007". This script also assumes that the uncompressed data and the scripts are in separate subdirectories of the same directory with the data in a "data" subdirectory. If there are errors, check to be sure the scripts conform to your directory structure. The data is not provided in this repository, but a link to it is below. Further details of how the scripts work are available in the scripts' comments.
 
 ## Introduction
 
